@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="GNEnterprise.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--<script type="text/javascript">
+        function checkOpenDate() {
+            var currentDate = new Date();
+            var openDate = new Date("2023-05-24"); // Set your desired open date here
+
+            if (currentDate < openDate) {
+                alert("You are not authorized to open this project at the moment.");
+            }
+        }
+    </script>--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 60px;
+        }
+
+        .auto-style2 {
+            height: 10px;
+            font-size: 12px;
+        }
+
+        .auto-style4 {
+            font-size: x-large;
+            text-decoration: underline;
+            color: #000000;
+        }
+
+        .footer {
+            left: 12px;
+            bottom: 4px;
+            width: 100%;
+            height: 18px;
+            background-color: #BDBDBD;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table style="font-family: Arial; width: 100%; height: 100%;">
+                <tr style="text-align: center">
+                    <td colspan="2" style="text-align: center; background-color: #BDBDBD;" class="auto-style1">
+                        <span class="auto-style4">G. N. ENTERPRISES</span><br />
+                        <br />
+                        <%--<asp:HyperLink ID="hypType" runat="server" NavigateUrl="~/WebFormType.aspx">Type</asp:HyperLink>
+                        &nbsp;
+                        <asp:HyperLink ID="hypSubType" runat="server" NavigateUrl="~/WebFormSubType.aspx">SubType</asp:HyperLink>
+                        &nbsp;--%>
+                        <asp:HyperLink ID="hypProduct" runat="server" NavigateUrl="~/WebFormProduct.aspx">Product</asp:HyperLink>
+                        &nbsp;
+                        <asp:HyperLink ID="hypParty" runat="server" NavigateUrl="~/WebFormParty.aspx">Party</asp:HyperLink>
+                        <%-- &nbsp;
+                        <asp:HyperLink ID="hypPurchase" runat="server" NavigateUrl="~/WebFormPurchase.aspx">Purchase</asp:HyperLink>--%>
+                        &nbsp;
+                        <asp:HyperLink ID="hypQuotation" runat="server" NavigateUrl="~/WebFormQuotation.aspx">Quotation</asp:HyperLink>
+                         &nbsp;
+                        <asp:HyperLink ID="hypSale" runat="server" NavigateUrl="~/WebFormSale.aspx">Sale</asp:HyperLink>
+                        &nbsp;                        
+                        <asp:HyperLink ID="hypDeliveryChallan" runat="server" NavigateUrl="~/WebFormDeliveryChallan.aspx">Delivery Challan</asp:HyperLink>
+                        <%--&nbsp;
+                        <asp:HyperLink ID="hypCredit" runat="server" NavigateUrl="~/WebFormCredit.aspx">Credit</asp:HyperLink>--%>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 100%; background-color: #E6E6E6; width: 100%">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <h2>Main Master</h2>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="footer">Powered by MarkUp Infosystem.</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
